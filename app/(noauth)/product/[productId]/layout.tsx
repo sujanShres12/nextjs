@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ProductLayout({
   children,
 }: {
@@ -7,6 +9,7 @@ export default function ProductLayout({
     <>
       {children}
       <p>product sujan</p>
+      <Link href={"/"}>Home</Link>
     </>
   );
 }

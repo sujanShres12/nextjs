@@ -15,7 +15,11 @@ export const generateMetadata = async ({
 async function ProductID({ params }: props) {
   let productId = (await params).productId;
 
-  return <p>{productId}</p>;
+  return (
+    <>
+      <p>{productId}</p>;
+    </>
+  );
 }
 
 export default ProductID;
