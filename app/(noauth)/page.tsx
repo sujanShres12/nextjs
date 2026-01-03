@@ -1,3 +1,3 @@
 export default function Home (){
-  return <p>Welcome Sujan</p>
+  return <p>Welcome noauth</p>
 }
