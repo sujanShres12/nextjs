@@ -17,7 +17,7 @@ async function ProductID({ params }: props) {
 
   return (
     <>
-      <p>{productId}</p>;
+      <p>{productId}</p>
     </>
   );
 }

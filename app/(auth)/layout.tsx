@@ -1,13 +1,7 @@
-export default function RootLayout({
+export default function RootAuthLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <body>{children}
-        auth
-      </body>
-    </html>
-  );
+  return { children };
 }
