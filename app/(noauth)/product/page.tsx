@@ -1,3 +1,5 @@
-export default function Product(){
-  return <p>Product</p>
+import { redirect } from "next/navigation";
+
+export default function Product() {
+  redirect("product/1");
 }
