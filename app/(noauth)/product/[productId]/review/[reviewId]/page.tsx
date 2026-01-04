@@ -1,3 +1,5 @@
+import Check from "./Check";
+
 async function ReviewId({
   params,
 }: {
@@ -6,6 +8,7 @@ async function ReviewId({
   const { reviewId, productId } = await params;
   return (
     <p>
+      <Check />
       {reviewId} {productId}
     </p>
   );
