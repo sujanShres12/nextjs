@@ -14,7 +14,10 @@ export const generateMetadata = async ({
 
 async function ProductID({ params }: props) {
   let productId = (await params).productId;
-
+  const i = Math.ceil(Math.random()*10);
+  if (i < 8) {
+    throw new Error("checking");
+  }
   return (
     <>
       <p>{productId}</p>
