@@ -1,7 +1,10 @@
 export default function RootAuthLayout({
   children,
+  login,
 }: {
   children: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return { children };
+  let isLogin = false;
+  return isLogin ? <>{children};</> : login;
 }
