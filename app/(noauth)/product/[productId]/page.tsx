@@ -14,7 +14,7 @@ export const generateMetadata = async ({
 
 async function ProductID({ params }: props) {
   let productId = (await params).productId;
-
+new Error('hello')
   return (
     <>
       <p>{productId}</p>
