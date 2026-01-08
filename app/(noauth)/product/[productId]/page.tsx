@@ -12,8 +12,8 @@ export const generateMetadata = async ({
   };
 };
 
-export async function generateStaticParams(): Promise<{ productId: number }[]> {
-  return [{ productId: 1 }, { productId: 2 }, { productId: 3 }];
+export async function generateStaticParams(): Promise<{ productId: string }[]> {
+  return [{ productId: '1' }, { productId: '2' }, { productId: '3' }];
 }
 
 async function ProductID({ params }: props) {
