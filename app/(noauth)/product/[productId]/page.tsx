@@ -2,7 +2,7 @@ import { Metadata } from "next";
 type props = {
   params: Promise<{ productId: number }>;
 };
-
+export const dynamicParams = false;
 export const generateMetadata = async ({
   params,
 }: props): Promise<Metadata> => {
@@ -12,9 +12,12 @@ export const generateMetadata = async ({
   };
 };
 
+export async function generateStaticParams(): Promise<{ productId: string }[]> {
+  return [{ productId: '1' }, { productId: '2' }, { productId: '3' }];
+}
+
 async function ProductID({ params }: props) {
   let productId = (await params).productId;
-  new Error("hello");
   return (
     <>
       <p>{productId}</p>
