@@ -1,8 +1,9 @@
-// "use client";
+"use client";
 
-import { server } from "../utility/utility";
+import { clinetOnly } from "../utility/clientOnly";
+// import { server } from "../utility/utility";
 
 export default function Client() {
-  const serverFunction = server();
-  return <>Client {serverFunction}</>;
+  const clientFunction = clinetOnly();
+  return <>Client {clientFunction}</>;
 }
