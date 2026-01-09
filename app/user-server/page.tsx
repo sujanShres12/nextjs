@@ -1,17 +1,5 @@
 import axios from "axios";
-type User = {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: {
-    stree: string;
-    suite: string;
-    city: string;
-    zipcode: string;
-    geo: { lat: string; lng: string };
-  };
-};
+import { User } from "@/types/Fetching";
 
 export default async function UserServer() {
   const response = await axios.get(
@@ -24,7 +12,7 @@ export default async function UserServer() {
         return (
           <span key={user.id}>
             <div>
-              Name: 
+              Name:
               <span>{user.name}</span>
               Email:
               <span>{user.email}</span>
