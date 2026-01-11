@@ -19,7 +19,7 @@ export async function generateStaticParams(): Promise<{ productId: string }[]> {
 
 async function ProductID({ params }: props) {
   let productId = (await params).productId;
-  let data: { title: string } = (await axios.get("http://localhost:3000/api"))
+  let data: { title: string } = (await axios.get(process.env.NEXT_PUBLIC_API_URL+"/api"))
     ?.data;
   return (
     <>
