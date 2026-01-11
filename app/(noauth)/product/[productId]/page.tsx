@@ -2,6 +2,7 @@ import axios from "axios";
 import { Metadata } from "next";
 type props = {
   params: Promise<{ productId: number }>;
+  searchParams:Promise<{}>
 };
 export const dynamicParams = false;
 export const generateMetadata = async ({
@@ -17,7 +18,7 @@ export async function generateStaticParams(): Promise<{ productId: string }[]> {
   return [{ productId: "1" }, { productId: "2" }, { productId: "3" }];
 }
 
-async function ProductID({ params }: props) {
+async function ProductID({ params,searchParams }: props) {
   let productId = (await params).productId;
   let data: { title: string } = (await axios.get(process.env.NEXT_PUBLIC_API_URL+"/api"))
     ?.data;
