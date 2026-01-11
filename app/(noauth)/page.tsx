@@ -1,3 +1,4 @@
+
 import ClientComp from "./Client";
 
 export default async function Home() {
